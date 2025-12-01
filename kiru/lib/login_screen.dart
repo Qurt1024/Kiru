@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kiru/colors.dart';
 import 'package:kiru/images.dart';
+import 'package:kiru/login/buttons_panel.dart';
+import 'package:kiru/login/icons_panel.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -24,7 +26,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               Image.asset(AppImages.appLogo,width: 68, height: 81,),
               Padding(
-                padding: const EdgeInsets.only(bottom: 9),
+                padding: const EdgeInsets.only(bottom: 8,left: 12),
                 child: Text('Kiru',style: TextStyle(
                   color: AppColors.black,
                   fontSize: 36,
@@ -34,11 +36,11 @@ class LoginScreen extends StatelessWidget {
              
             ],
           ),
-           const SizedBox(height: 57,),
-          ElevatedButton(onPressed: (){}, child: Text('Регистрация'), style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(AppColors.black)
-          ),),
-          const Spacer(flex: 3,),
+          const SizedBox(height: 57),
+          ButtonsPanel(),
+          const SizedBox(height: 61),
+          IconsPanel(),
+          const Spacer(flex: 2),
         ],
       ),
     )
