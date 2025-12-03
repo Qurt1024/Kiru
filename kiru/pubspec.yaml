@@ -66,6 +66,14 @@ flutter:
       - images/icons/extra_menu.png
       - images/icons/settings.png
       - images/profile_pic.png
+      - images/icons/verified.png
+      - images/icons/telegram.png
+      - images/icons/instagram.png
+      - images/icons/create.png
+      - images/post_images/post1.jpg
+      - images/post_images/post2.jpg
+      - images/post_images/post3.jpg
+      - images/post_images/post4.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
