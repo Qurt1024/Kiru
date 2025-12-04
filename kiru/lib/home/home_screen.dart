@@ -27,13 +27,15 @@ class HomeScreen extends StatelessWidget{
       ),
       body:
       
-      Column(
-        children: [
-          SizedBox(height: 40,),
-          ProfileBox(),
-          SizedBox(height: 16,),
-          PostView()
-        ],
+      SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 40,),
+            ProfileBox(),
+            SizedBox(height: 16,),
+            PostView()
+          ],
+        ),
       )
     );
   

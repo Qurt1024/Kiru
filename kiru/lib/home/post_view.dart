@@ -46,15 +46,16 @@ Widget postGrid(String imageName){
   Widget build(BuildContext context) {
     return Container(
       width: 345,
-      height: 396,
       decoration: BoxDecoration(
       color: AppColors.textcolor,
       borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Padding(padding: EdgeInsets.symmetric(vertical: 10)),
           SizedBox(
+            
             height: 40,
             width: 332,
             child: FilledButton(onPressed: () {},
@@ -77,8 +78,9 @@ Widget postGrid(String imageName){
              ))
              ),
           ),
-          Expanded(
-            child: GridView.builder(
+          
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
                 padding: EdgeInsets.all(18),
               
@@ -92,7 +94,7 @@ Widget postGrid(String imageName){
                 itemBuilder: (context,index){
                   return postGrid(images[index]);
                 }),
-          )
+          
         ],
       ),
     );
